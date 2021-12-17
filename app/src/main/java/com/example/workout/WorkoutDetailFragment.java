@@ -58,10 +58,12 @@ public class WorkoutDetailFragment extends Fragment {
         }
     }
 
+    // Method onCreateView dipanggil saat Fragment harus menampilkan layoutnya
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        // Layout tampilan untuk fragment ini
         return inflater.inflate(R.layout.fragment_workout_detail, container, false);
     }
 

@@ -1,0 +1,19 @@
+https://www.codepolitan.com/membuat-dan-menggunakan-fragment-59f80eff061a4
+
+Fragment Lifecycle
+Fragment memiliki banyak method yang dapat di override seperti halnya Activity:
+
+#onAttach() dipanggil saat sebuah fragment terhubung ke activity.
+#onCreate() diapnggil saat sebuah fragment dibuat (objeknya di memori).
+#onCreateView() dipanggil saat fragment sudah siap membaca sebuah layout.
+#onViewCreated() dipanggil setelah onCreateView() 
+ dan memastikan layout yang dibaca fragment adalah non-null. 
+ Semua pengaturan view seperti pembacaan findViewById, 
+ menambah onClickListener dapat dilakukan di sini.
+#onActivityCreated() dipanggil setelah activity pembaca sudah menyelesaikan onCreate()-nya.
+#onStart() dipanggil setelah fragment siap untuk ditampilkan di layar.
+#onResume() - Dipakai untuk melakukan pembacaan data yang lebih "rumit" seperti lokasi, sensor, dll.
+#onPause() - Tempat melepas data "rumit". Lakukan commit di sini.
+#onDestroyView() dipanggil saat layout sebuah fragment akan dihapus dari memori, namun fragmentnya masih ada di memori.
+#onDestroy() dipanggil jika fragment sudah tidak dipakai.
+#onDetach() dipanggil saat fragment tidak lagi terhubung ke sebuah activity.
